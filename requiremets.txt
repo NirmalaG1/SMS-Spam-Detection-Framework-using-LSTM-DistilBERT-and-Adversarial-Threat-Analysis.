@@ -1,0 +1,10 @@
+tensorflow
+keras
+sci-kit learn
+pandas
+numpy
+matplotlib
+seaborn
+google-generativeai
+keras-hub
+
