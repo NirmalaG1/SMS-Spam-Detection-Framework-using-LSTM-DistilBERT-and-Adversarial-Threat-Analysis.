@@ -71,9 +71,7 @@ To set up the project locally or in a notebook environment, install the required
 pip install tensorflow keras keras-hub gradio
 
 
-
-
-**## 8. Future Improvements**
+## 8. Future Improvements
 ​Handling Ambiguous Messages with More Data:
 
 To further improve model robustness, we plan to train the model with more edge-case and ambiguous datasets—specifically normal messages that contain spam-like keywords—to reduce false positives and improve classification accuracy on tricky texts.
