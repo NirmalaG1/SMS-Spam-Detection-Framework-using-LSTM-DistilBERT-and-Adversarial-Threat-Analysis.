@@ -1,18 +1,20 @@
-SMS-Spam-Detection-Framework-using-LSTM-DistilBERT-and-Adversarial-Threat-Analysis.
+
 ​
 # Hybrid DistilBERT & LSTM Smishing Detection System
 
 ## 1. Project Overview
-This project is an advanced AI-powered Smishing and SMS Spam detection system. It employs a sophisticated pipeline including data preprocessing, feature separation, synthetic data augmentation via Google Gemini, and a hybrid deep learning architecture for real-time threat classification.
+This project is an advanced AI-powered Smishing and SMS Spam detection system designed to identify fraudulent text messages in real time. It features a robust pipeline encompassing data feature separation, Google Gemini-driven synthetic data augmentation, adversarial threat analysis, edge case handling, and a hybrid deep learning architecture.
+
 
 ## 2. Problem Statement
-Smishing (SMS phishing) poses a significant cybersecurity threat through fraudulent links and urgent social engineering tactics. Standard keyword filters are insufficient. This project addresses the challenge by leveraging state-of-the-art transformer models (DistilBERT) and recurrent networks (LSTM) enhanced with synthetic data augmentation.
+Smishing (SMS phishing) leverages deceptive links and high-urgency social engineering to commit financial fraud. Traditional static keyword filters fail against evolving attacker patterns, adversarial obfuscation, and edge-case scenarios. This project bridges that gap using state-of-the-art transformer and recurrent neural network models.
 
 ## 3. Dataset & Preprocessing
-* *Feature Separation:* The dataset was meticulously structured by dividing features into text inputs, numeric features, and target output labels.
-* *Data Splitting:* Data was split into training and testing sets, with 20% reserved strictly for validation and evaluation.
-* *Synthetic Data Generation:* Google Gemini was utilized to generate synthetic data samples to handle data imbalance and improve model robustness.
 
+* *Feature Separation:* The input data was structured cleanly by separating text content, numerical metadata features, and target output labels.
+* *Data Splitting:* The dataset was split into training and testing sets, with 20% strictly reserved for validation.
+* *Synthetic Data Augmentation:* To tackle data imbalance and scarcity of rare smishing variants, *Google Gemini* was utilized to generate high-quality synthetic text samples, significantly improving the model's training diversity and generalization.
+  
 ## 4. Models Explored & Comparison
 Multiple model architectures were built, trained, and rigorously compared:
 1. *Model 1:* 
@@ -46,7 +48,7 @@ Architecture & Optimization: Utilizes the same robust transformer backbone and n
 Performance Goal: Assess whether the synthetic data effectively reduces false positives, improves boundary-case classification, and enhances overall security metrics compared to the original baseline.
 
 
-* *Final Selection:* Based on comparative performance, the *Gemini-augmented DistilBERT model* was selected as the final optimal model for deployment.
+*Final Selection:* Based on comparative performance, the *Gemini-augmented DistilBERT model* was selected as the final optimal model for deployment.
 
 ## 5. Technologies Used
 * *Python* (Core programming language)
@@ -56,7 +58,19 @@ Performance Goal: Assess whether the synthetic data effectively reduces false po
 * *Gradio* (Interactive web UI for deployment)
 * *Google Colab* (Development and cloud execution environment)
 
-## 6. Installation
+
+
+## 6. Adversarial Threat Analysis & Edge Cases
+* *Adversarial Threat Analysis:* Tested the model's resilience against adversarial text manipulation (e.g., character substitution, hidden Unicode characters, spaced-out scam words) to ensure attackers cannot easily bypass the filter.
+
+
+
+## 7. Installation
 To set up the project locally or in a notebook environment, install the required dependencies:
 ```bash
 pip install tensorflow keras keras-hub gradio
+
+## 8. Future Improvements
+​Handling Ambiguous Messages with More Data:
+
+To further improve model robustness, we plan to train the model with more edge-case and ambiguous datasets—specifically normal messages that contain spam-like keywords—to reduce false positives and improve classification accuracy on tricky texts.
