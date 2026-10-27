@@ -64,14 +64,15 @@ Performance Goal: Assess whether the synthetic data effectively reduces false po
 * *Adversarial Threat Analysis:* Tested the model's resilience against adversarial text manipulation (e.g., character substitution, hidden Unicode characters, spaced-out scam words) to ensure attackers cannot easily bypass the filter.
 
 
-
-## 7. Installation
-To set up the project locally or in a notebook environment, install the required dependencies:
-```bash
-pip install tensorflow keras keras-hub gradio
-
-
-## 8. Future Improvements
+## 7. Future Improvements
 ​Handling Ambiguous Messages with More Data:
 
 To further improve model robustness, we plan to train the model with more edge-case and ambiguous datasets—specifically normal messages that contain spam-like keywords—to reduce false positives and improve classification accuracy on tricky texts.
+
+## 8. Installation
+To set up the project locally or in a notebook environment, install the required dependencies:
+```bash
+pip install sci-kit learn matplotlib seaborn tensorflow keras keras-hub gradio
+
+
+
